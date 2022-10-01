@@ -1,0 +1,1138 @@
+body{
+  background-image: "{% static 'imagenes/tierra.jpg' %}";
+  background-attachment: fixed;
+}
+#header{
+  display: grid;
+  grid-template-columns: 2fr 1fr   ;
+}
+#header-icon{
+  margin: auto;
+  width: 50% !important;
+}
+#barranavegacion{
+  background-color: #73b925 !important;
+  align-items: center !important;
+  
+}
+#usuario{
+  align-items: center !important;
+}
+
+
+#correosnavlink{
+  gap: 5% !important;
+}
+#barranavegacion a{
+  
+  color: aliceblue ;
+}
+.contenedor{
+display: grid;
+grid-template-columns: 100%    ;
+position: relative;
+    min-height: 100vh;
+    overflow: auto;
+}
+.ContenedorInicio{
+    font-size: 18px;
+    width: 100%;
+    
+    
+    
+   
+}
+
+.ContenedorAsociar{
+text-align: center;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    
+    margin-bottom: 1%;
+}
+.ContenedorAsociar button{
+  width: 80%;
+}
+.AportacionContenedor{
+  text-align: justify !important;
+  text-justify: inter-word;
+  width: 90%;
+  margin-top: 20%;
+  padding: 1%;
+}
+.AportacionContenedor li{
+  text-align: left !important;
+}
+
+
+.AportacionContenedorJuridica{
+  text-align: justify;
+  text-justify: inter-word;
+  width: 90%;
+  margin-top: 20%;
+  padding: 1%;
+
+}
+
+.AportacionContenedorJuridica li{
+  text-align: left !important;
+
+}
+#Aportar{
+  background-color: whitesmoke;
+}
+.TituloAsociar{
+  text-align: center;
+}
+.card-text{
+  color: black !important;
+}
+input[name="Nombre"] {
+    width: 100%;
+  }
+  input[name="Apellido"] {
+    width: 100%;
+  }
+  input[name="email"] {
+    width: 100%;
+  }
+  input[name="Telefono"] {
+    width: 100%;
+  }
+  input[name="Patrocinador"] {
+    width: 100%;
+  }
+  input[name="Cedula"] {
+    width: 100%;
+  }
+  input[name="Direccion"] {
+    width: 100%;
+  }
+  input[name="Celular"] {
+    width: 100%;
+  }
+  input[name="LugarNacimiento"] {
+    width: 100%;
+  }
+  input[name="FechaNacimiento"] {
+    width: 100%;
+  }
+  
+  input[name="EstadoCivil"] {
+    width: 100%;
+  }
+  input[name="LugarTrabajo"] {
+    width: 100%;
+  }
+  input[name="TelTrabajo"] {
+    width: 100%;
+  }
+  input[name="DireccionTrabajo"] {
+    width: 100%;
+  }
+  input[name="Correo"] {
+    width: 100%;
+  }
+  input[name="Asunto"] {
+    width: 100%;
+  }
+  textarea[name="Mensaje"] {
+    width: 100%;
+  }
+.offcanvas-title{
+    margin-right: 10% !important;
+}
+.logo{
+    width: 370px;
+}
+li{
+    font-size:larger;
+    text-align: center;
+}
+.dropdown-item{
+  color: black !important;
+  text-align: left !important;
+}
+#btnAsociar{
+    font-family: 'Bebas Neue', cursive !important;
+    font-size: 25px;
+}
+
+#fondo{
+  
+  width: 100% !important;
+}
+.contenedor-nosotros{
+background-image: "../imagenes/green.jpg" ;
+
+}
+
+
+.contenedor-trasnparente{
+  background-color: transparent;
+  width: 100%;
+  height: 12% ;
+  color: whitesmoke !important;
+  text-align: center;
+}
+.contenedor-trasnparente2{
+  background-image: url("../imagenes/josefin-WS5yjFjycNY-unsplash.jpg") ;
+  width: 100%;
+  
+  color: whitesmoke !important;
+  text-align: center;
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+
+}
+.contenedor-trasnparente2 ol{
+ 
+list-style: none;
+}
+.contenedor-trasnparente div{ 
+margin: auto;
+
+width: 60%;
+font-size: 3.5rem !important;
+}
+.contenedor-trasnparente h1{ 
+  
+  font-size: 4.5rem !important;
+  }
+.nosotros-contenedor-mision{
+  display: grid;
+  grid-template-columns: 45% 50%;
+  text-align: center;
+  margin-top: 6%;
+  margin-bottom: 6%;
+  background-color: aliceblue;
+  font-size: 1.0em;
+  
+}
+.nosotros-contenedor-objetivo{
+  background-color: #73b925 !important;
+  padding: 1%;
+  width: 100%;
+  
+}
+.nosotros-contenedor-objetivo li{
+margin: 2% !important;
+text-align: justify !important;
+  text-justify: inter-word !important;
+}
+.nosotros-contenedor-objetivo ol{
+  margin: 2% !important;
+  list-style:none;
+  }
+  .nosotros-contenedor-objetivo h1{
+    margin: auto;
+   width: 10%;
+   
+    }
+
+    .accordion-body{
+      background-color: #73b925 !important;
+    }
+span{
+  text-align: justify !important;
+  text-justify: inter-word !important;
+}
+.nosotros-contenedor-valores{
+  background-color: transparent !important;
+  padding: 1%;
+  width: 100%;
+  
+}
+#misionvalorimg{
+  margin-left: 41%;
+  margin-right: 10%;
+}
+
+.ilustracion-mision hr{
+  margin: auto;
+  width: 60% !important;
+  opacity: 1.25;
+  height: 10px !important;
+  border-width: 5px !important;
+  background-color: #73b925 !important;
+  color: #73b925 !important;
+  
+  
+}
+.ilustracion-mision{
+  padding: 2%;
+}
+
+ .nosotros_planta{
+   width: 100% !important;
+ }
+ .valores{
+   color: black !important;
+   margin: auto;
+   width: 100%;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+ }
+ .valores img{
+  margin: auto;
+  width: 25%;
+  
+}
+.card-title{
+  text-align: center !important;
+}
+#card-valores{
+  margin: 1% !important;
+  padding: 1%
+}
+.accordion-body{
+  text-align: center !important;
+}
+.accordion-button{
+  text-align: center !important;
+  display: inline !important;
+}
+.verproyectocontenedor{
+  background-color: whitesmoke;
+  padding: 1%
+}
+#Proyectos{
+  background-color: whitesmoke;
+ 
+}
+#pills-tab{
+  background-color: whitesmoke;
+}
+.card-img{
+  width: 100%;
+  height: 300px !important;
+}
+#cardProyecto{
+  width: 40%;
+  height: 10% !important;
+  margin: 2%;
+  background-color: whitesmoke;
+  
+  color: #111110 !important;
+  
+}
+.card-img:hover{
+  opacity: 0.5;
+  
+  
+}
+
+#myTab{
+background-color: whitesmoke;
+}
+.form-label{
+  text-align: center !important;
+}
+.formularioProyectos{
+  background-color: whitesmoke;
+  width: 100% !important;
+  margin: auto;
+  
+}
+
+.btnPersona{
+  background-color: whitesmoke;
+  width: 15%;
+  margin: auto;
+}
+.fromProyectosA{
+
+overflow: scroll;
+width: 50%;
+margin: auto;
+}
+.fromVideosA{
+  margin: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: 40%;
+  padding: 1%;
+  background-color: whitesmoke;
+}
+.formequipo{
+  margin: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: 40%;
+  padding: 1%;
+  background-color: whitesmoke;
+
+}
+.ContenedorAsociar{
+  background-color: whitesmoke;
+}
+.contenedorvistaProyetos{
+  background-color: whitesmoke;
+  
+}
+.contenedorCorreo{
+display: grid;
+grid-template-columns: 1fr 2fr;
+background-color: whitesmoke;
+padding: 1%;
+
+}
+.contenedorvistaCorreo{
+  background-color: whitesmoke;
+}
+.correo{
+margin: 1%;
+
+}
+#listasolucitudes{
+
+  padding: auto;
+}
+#footer{
+
+  margin-top: 15%;
+  
+}
+.administracion{
+display: grid;
+grid-template-columns: 40% 60%;
+background-color: whitesmoke;
+padding: 1%
+}
+#btn-solicitudes{
+  margin: 0 auto !important;
+  width: 50%;
+  display: block;
+}
+.listaSolicitud{
+ overflow: scroll;
+ padding: 2%;
+}
+
+.vistaproyectos{
+  text-decoration: none  !important;
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: 80% !important;
+}
+#Videos{
+  padding: 2%;
+  background-color: white !important;
+}
+iframe{
+  width: 300px;
+  height: 200px;
+}
+.formVideos{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: white;
+  
+}
+.formVideos form{
+  padding: 2%;
+
+}
+.formCorreo{
+background-color: whitesmoke;
+margin: auto;
+width: 50%;
+padding: 1%;
+text-align: center;
+}
+.proyectosDetalles{
+  display: grid !important;
+  grid-template-rows: 1fr 1fr 1fr 1fr !important; 
+  
+}
+#detallesSolicitudesAdministracion{
+  display: inline-flex;
+  flex-wrap: wrap;
+width: 100%; 
+background-color: #198754;
+margin-top: 1%;
+}
+#detallesSolicitudesAdministracion blockquote{
+  border-radius: 15px;
+  border-style: solid;
+  border-width: 1px;
+  margin: 1%;
+  padding: 1%;
+  background-color: whitesmoke !important;
+
+}
+.solicitudnombre{
+  margin: auto;
+  width: 100%;
+  
+}
+#detallesSolicitudesAdministracion{
+  padding: 1%;
+}
+#solicitudGuardarBTN{
+  width: 50%;
+  margin-top: 1% !important;
+  margin-bottom: 1% !important;
+  margin-left: 25% !important;
+}
+.miniatura{
+  width: 85% !important;
+  margin: auto;
+  border-width: 5px;
+  border-color: white;
+  border-style: solid;
+  border-radius: 5px;
+}
+.contenedorminiatura{
+  display: inline-flex;
+  background-color: #73b925;
+  margin: auto;
+  width: 100%;
+  border-width: 5px;
+  border-color: #198754;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 2%;
+}
+.Equipo{
+display: inline-flex;
+flex-wrap: wrap;
+padding: 2%;
+width: 100%;
+background-color:#198754
+}
+#vistaideas{
+float: left;
+ width: 50%;
+ padding: 1%;
+}
+
+#vistaideas2{
+padding: 1%;
+  width: 50%;
+ }
+.form-control{
+  width: 100% !important;
+}
+
+.servicios{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: transparent;
+  margin: 0.5%;
+ 
+}
+.servicios ul{
+  text-align: center !important;
+  text-justify: inter-word;
+ list-style-type: none;
+
+
+}
+.servicios li{
+  text-align: left;
+  text-justify:inter-character;
+  
+  margin: 0.7%;
+
+}
+.lista1{
+  color: white;
+  padding: 3%;
+  background-color:#73b925 ;
+  text-align: justify !important;
+  
+
+}
+.lista1 h2{
+  text-align: center !important;
+}
+.lista2 h2{
+  text-align: center !important;
+}
+.lista3 h2{
+  text-align: center !important;
+}
+.lista2{
+  color: white;
+  padding: 3%;
+  background-color: #198754;
+  text-align: justify !important;
+  margin-left: 1%;
+  margin-right: 1%;
+
+}
+.lista3{
+  padding: 3%;
+  background-color: whitesmoke;
+  text-align: justify !important;
+
+}
+#carouselExampleSlidesOnly{
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  
+  background-color: transparent ;
+}
+.carousel-inner{
+  background-color: transparent;
+  
+}
+div[class="carousel-item active"]{
+  background-color: transparent;
+}
+.InicioInteraccion{
+  background-image:  url("../imagenes/homev3-scaled.jpg");
+  background-size: cover;
+  width: 100% !important;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  padding: 3%;
+  
+}
+
+#iniciobtnInteraccin{
+ background-color: #73b925 !important;
+ font-weight: bold !important;
+}
+#iniciobtnInteraccin:hover{
+  background-color: #111110 !important;
+ }
+.tresRiteracion{
+  background-color: white;
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr   ;
+  padding: 5%;
+  text-align: justify;
+  margin-top: 3%;
+  margin-bottom: 3%;
+ 
+}
+.LastresR{
+  text-align: left;
+  padding-left: 10%;
+  font-size:2.0em
+}
+.LastresR img{
+ float: right;
+}
+.inicioiteracionLink{
+ width: 100%;
+ 
+}
+.iniciobtnLinks{
+  width: auto !important;
+}
+
+.persona p{
+  font-size: 1.3rem;
+}
+#personaimg{
+  width: 300px !important;
+  height: 300px !important;
+
+  border-radius: 50% !important;
+}
+#nombrePersonaEquipo{
+  width: 80%;
+text-align: center;
+}
+#historialPersonaEquipo{
+  text-align: justify;
+
+}
+
+#descargar{
+  margin-top: 1%;
+  margin-left: 40%;
+  width: 20%;
+}
+@media only screen and (max-width: 600px) {
+  #descargar{
+    margin: auto;
+    margin-top: 2%;
+    width: 100%;
+  }
+ #header{
+   display: flex;
+   
+ }
+ #header-info{
+   width: 100%;
+   
+  
+ }
+ #header-icon{
+   margin: auto;
+   width: 20%;
+ }
+ .contenedor-trasnparente{ 
+    height: 10% !important;
+  }
+ .contenedor-trasnparente h1{ 
+  
+  font-size: 2.5rem !important;
+  }
+  .nosotros-contenedor-mision{
+    display:block;
+  }
+  .nosotros-contenedor-objetivo h1{
+    width: 30%;
+  }
+
+  .AportacionContenedor{
+    padding: 3%;
+    margin: 0%;
+    width: 100%;
+  }
+  #btnformAsociarse{
+    width: 100%;
+  }
+  .ContenedorAsociar{
+    grid-template-columns: 100%;
+  }
+
+#imagen1{
+  width:30%;
+  float: left;
+}
+#imagen2{
+ margin-left: 30%;
+ width: 30%;
+}
+
+#imagen3{
+  width: 30%;
+  float: right;
+}
+#Aprende{
+  margin: 0% !important;
+  max-width: 100% !important;
+}
+#Aplica{
+  margin: 0% !important;
+  max-width: 100% !important;
+  font-weight: bold !important;
+}
+#Asociate{
+  margin: 0% !important;
+  max-width: 100% !important;
+}
+
+.tresRiteracion{
+  display: block;
+}
+#iniciobtnInteraccin{
+  font-size: 24px;
+  height: 20%;
+  width: 40%;
+}
+a[name="btnasociateinicio"]{
+  margin-left: 61% !important;
+
+
+}
+a[name="btnaprendeinicio"]{
+
+  margin-right: 100% !important;
+}
+
+.valores{
+  display: block;
+}
+.persona{
+  width: 100%
+}
+.persona ul{
+  padding: 0% !important;
+  
+}
+
+.servicios{
+  grid-template-columns: none;
+  grid-template-rows: 1fr 1fr 1fr;
+  
+}
+.servicios div{
+  padding: 4%;
+  font-size: large;
+  
+}
+#cardProyecto{
+  width: 100%;
+
+  
+}
+.formCorreo{
+  width: 100%;
+}
+
+.pdfmarco{
+  display: none;
+}
+.administracion{
+display: block;
+}
+
+.formequipo{
+  width: 100%;
+}
+.formularioProyectos{
+  width: 100%;
+}
+.fromProyectosA{
+  width: 100%;
+}
+.contenedorCorreo{
+  display: block;
+}
+
+#videoslink1{
+  display: none;
+}
+
+#videoslink2{
+  display: none;
+}
+
+}
+/*##############################################  */
+.reporte{
+
+  display: grid;
+  grid-template-rows: 1fr 2fr 2fr;
+  
+}
+.tabla{
+  margin-bottom: 1%;
+  padding: 2%;
+ 
+}
+#aulaAdminvideos{
+
+  margin: 2%;
+}
+#Aprende{
+  
+  max-width: 40%;
+}
+#Aplica{
+  
+  max-width: 40%;
+}
+#Asociate{
+  
+  max-width: 40%;
+}
+/* p {
+  margin: 1.5em 0;
+  color: #aaa;
+}
+
+img {
+  max-height: 50vh;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: #bbb;
+}
+
+.italic { font-style: italic; }
+.small { font-size: 0.8em; } */
+
+/** LIGHTBOX MARKUP **/
+
+.lightbox {
+  /* Default to hidden */
+  display: none;
+
+  /* Overlay entire screen */
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  /* A bit of padding around image */
+  padding: 1em;
+
+  /* Translucent background */
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Unhide the lightbox when it's the target */
+.lightbox:target {
+  display: block;
+}
+
+.lightbox span {
+  /* Full width and height */
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  /* Size and position background image */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+
+/* ######################################################## */
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #73b925; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+#carretaimg{
+  width: 100% !important;
+  height: 100% !important;
+}
+
+div[class="card text-center"]{
+  border: none;
+}
+div[class="card-body"]{
+  border: none;
+}
+
+div[class="slideshow-container"]{
+width: 100% !important;
+margin: 0%;
+}
+
+
+
+#Aprende{
+  
+  margin-left: 35%;
+  position:relative;
+  background-color: transparent ;
+  text-align: justify !important;
+}
+#Aplica{
+  position: relative;
+  
+  margin-left: 48%;
+  background-color: transparent ;
+  text-align: justify !important;
+}
+#Asociate{
+position: relative;
+  
+  font-weight: bold;
+  margin-left: 65%;
+  background-color: transparent ;
+  text-align: justify !important; 
+}
+.Aula{
+  background-color: whitesmoke;
+}
+.Aula p{
+  
+  margin: auto;
+  margin-top: 2%;
+  width: 75%;
+  text-align: center;
+}
+#formPersonaFisica{
+  
+
+  padding: 1%;
+}
+
+#formPersonaJuridica{
+  background-color: #73b925;
+
+  padding: 1%;
+}
+::placeholder{ /* Most modern browsers support this now. */
+  text-align: center;
+}
+
+.categoria{
+background-color: #198754;
+margin: auto;
+width: 80%;
+padding: 2%;
+text-align: center;
+margin-bottom: 1%;
+border-radius: 15px;
+border-style: solid;
+border-width: 1px;
+border-color:#73b925;
+}
+iframe{
+    border-radius: 5px;
+    margin: 1%;
+
+}
+#videoslink1{
+  position: fixed !important;
+  top: 30% !important;
+ 
+  width: 10%;
+  
+}
+#videoslink2{
+  position: fixed !important;
+  top: 36% !important;
+  
+  width: 10%;
+  
+}
+.pestanaespaciado{
+  width: 100% !important;
+  height: 100% !important;
+}
+#v-pills-tabContent{
+  
+  width: 60%;
+  width: 100% !important;
+}
+#proyectosA{
+
+  padding: 1%;
+  background-color: whitesmoke;
+}
+.contenedorbusqueda{
+  padding: 0.5%;
+}
+.nav-item{
+ margin-left: 1%;
+
+font-size: x-large;
+font-weight: bold;
+}
+.nav-item :hover{
+  text-decoration: underline;
+}
+#serviciosIMG{
+  background:transparent;
+  border: none;
+  width: 50% !important;
+  margin-left: 20% !important;
+  margin-right: 10% !important;
+}
+.Aliados{
+  text-align: center;
+  background-color: white;
+  padding: 1%;
+}
+.aliadosHR{
+  width: 20% !important;
+  margin: auto;
+ 
+  background-color: #73b925;
+  height: 4px !important;
+}
+
+#iniciocardtext{
+  font-weight: bold !important;
+}
+.misionvalor{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: whitesmoke;
+  color: white !important;
+}
+#misionvalorcard{
+  margin: 0.5%;
+  font-weight: bold !important;
+}
+#misionvalortexto{
+  color: white !important;
+  text-align: justify !important;
+
+}
+.categoria h3{
+  color: whitesmoke !important;
+}
+.img-thumbnail{
+  border: none;
+}
+#personacard{
+  max-width: 100% !important;
+}
+.formCategoria{
+  padding: 1%;
+border-style: solid;
+border-radius: 2px;
+border-color: #198754;
+
+}
+.formVideos{
+  padding:0.5% !important;
+}
+.autenticar-contenedor{
+  background-color: whitesmoke;
+  width: 70%;
+  padding: 1%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+  margin-bottom: auto;
+}
+
+nav ul{
+  margin: auto !important;
+}
+
+#usuario{
+
+  margin-left: 1% !important;
+}
+.contenedorUsuarios{
+width: 98% !important;
+margin: auto;
+padding: 0.5%
+ 
+}
+.registrar-contenedor{
+
+background-color:#198754;
+border-style: solid;
+border-radius: 5px;
+border-width: 3px;
+border-color: whitesmoke;
+margin: auto;
+padding: 1%;
+
+}
+.col-sm-6{
+  margin-top: 0.5%;
+}
+#eliusuario{
+  width: 100% !important;
+  margin-top: 0.5%;
+}
+
+#formregistrarusuario{
+
+background-color:whitesmoke;
+width: 50%;
+margin: auto;
+padding: 1%;
+border-radius: 15px;
+}

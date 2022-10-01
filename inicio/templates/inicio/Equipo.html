@@ -1,0 +1,48 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="Equipo">
+
+
+    {% for personas in persona %}
+    <div class="persona" style="margin: 1%;">
+
+
+      <div class="card mb-3" id="personacard">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{{personas.FotoPerfil.url}}" class="img-fluid rounded-start" id="personaimg" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h3 class="card-title">{{personas.Role}}</h3>
+              <h5 class="card-title">{{personas.Nombre}} {{personas.Apellido}}</h5>
+              <p class="card-text" id="historialPersonaEquipo">{{personas.HistorialProfesional}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% endfor %}
+
+</div>
+
+
+<div class="Aliados">
+
+    <h1>Aliados</h1>
+    <hr class="aliadosHR">
+  <img src="{% static 'imagenes/DominicanaLimpia.png'%}" class="img-thumbnail"   >
+  <img src="{% static 'imagenes/EcoBasura.png'%}" class="img-thumbnail"   >
+  <img src="{% static 'imagenes/Adiplast.jpg'%}" class="img-thumbnail"   >
+  <img src="{% static 'imagenes/inproca.png'%}" class="img-thumbnail"  >
+  <img src="{% static 'imagenes/lab.png'%}" class="img-thumbnail"   >
+
+
+</div>
+
+
+{% endblock content %}

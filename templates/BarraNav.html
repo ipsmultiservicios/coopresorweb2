@@ -1,0 +1,128 @@
+{% load static %}
+<nav class="navbar navbar-light bg-light" id="header">
+  <a class="navbar-brand" href="/"><img src="{% static 'imagenes/avada-charity-logo-retina.png'%}"class="logo" alt=""></a>
+  <form class="container-fluid justify-content-start">
+    
+
+
+    <!--sacado class="badge bg-success" -->
+    <span  style="padding: 10px; margin:1% " id="header-info">
+      <img src="{% static 'imagenes/correo-electronico.png'%}" width="35px" alt=""  >
+     <h5>coopresol@gmail.com</h5> 
+      
+    </span>
+    
+    <span style="padding: 10px; margin: 1%; " id="header-info">
+      <a href="https://wa.me/8293043646"><img src="{% static 'imagenes/whatsapp.png'%}" width="35px" alt="" ></a>
+      <!--<img src="{% static 'imagenes/whatsapp.png'%}" width="35px" alt="" >-->
+      <h5>+1 (809) 613-6364</h5>
+    </span>
+
+    
+  </form>
+</nav>
+
+    
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="barranavegacion">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+        </li>
+      
+        {% if pagina == 'administracion' %}
+        {% if request.user.is_authenticated %}
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'Equipo' %}">Equipo</a>
+        </li>  
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'ProyectosAdmin' %}">Proyectos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'Aula' %}">Aula</a>
+        </li>
+        {% endif %}
+        {% else %}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Nosotros
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+            <li><a class="dropdown-item" href="{% url 'Nosotros'   %}">Nosotros</a></li> 
+            <li><a class="dropdown-item" href="Equipo">Nuestro Equipo</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'Proyectos'  %}">Proyectos/Ideas</a>
+        </li>
+       
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'Aprende' %}">Aprende</a>
+        </li>
+        
+        {% endif %}
+        
+      
+        {% if pagina == 'administracion'%}
+        {% if request.user.is_authenticated %}
+        <li class="nav-item">
+          <a class="nav-link" href="/administracion/Correos">
+            <div  class="d-flex" id="correosnavlink">
+              Correos
+              <span class="badge bg-secondary">{{correosPendiente.count}}</span> 
+            </div>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-outline-success me-2" href="/administracion/" id="btnAsociar">Solicitudes</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="btn btn-outline-success me-2" href="{%  url 'Reporte' %}" id="btnAsociar">Reporte</a>
+        </li>
+        {% if request.user.is_authenticated %}
+        {% if request.user.is_superuser %}
+        <li class="nav-item">
+          <a class="btn btn-outline-success me-2" href="{%  url 'usuarios' %}" id="btnAsociar">Usuarios</a>
+        </li>
+        {% endif %}
+
+        <div class="container-fluid justify-content-start" role="alert">
+          <h4 class="btn btn-light" style="font-weight:bold;">{{request.user}}</h4>
+          <h4 class="alert-heading"></h4>
+        </div>
+        <form action="{% url 'busqueda' %}" class="d-flex" id="usuario">
+          <a class="btn btn-danger" href="{% url 'cerrarSesion' %}" id="btnAsociar">Salir</a>
+        </form>
+        {% endif %}
+     
+        {% endif %}
+       
+        
+        {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'Servicios' %}">Servicios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'Contactanos' %}">Contáctanos</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-outline-success me-2" href="{% url 'Asociarse' %}" id="btnAsociar">Asóciate</a>
+        </li>
+        <form action="{% url 'busqueda' %}" class="d-flex">
+          <input class="form-control me-2" name="q" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Buscar</button>
+        </form>
+        {% endif %}
+      </ul>
+      
+    
+      
+    </div>
+  </div>
+</nav>

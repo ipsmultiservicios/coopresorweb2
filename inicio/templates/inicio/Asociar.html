@@ -1,0 +1,158 @@
+{% extends 'main.html '%}
+{% load static %}
+
+
+{% block content%}
+
+<div class="TituloAsociar">
+    <h1 style="color: white;">Hazte Socio</h1>
+
+</div>
+<div class="ContenedorAsociar">
+
+    
+    
+    <div class="formularioAsociar " >
+
+<br>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button type="button" class="btn btn-primary" id="btnformAsociarse" onclick="myFunction()">Persona Física</button>
+            <button type="button" class="btn btn-primary"id="btnformAsociarse" onclick="myFunctionJuridica()">Persona Jurídica</button>
+          </div>
+          <br>
+            <script>
+                window.onload = function() {
+                    document.getElementById("id_edad").style.display = "none";
+                    document.getElementById("formFile").style.display = "none";
+                    document.getElementById("id_Estado").style.display = "none";
+                };
+                  
+              function myFunction() {
+                var fisico = document.getElementById("formPersonaFisica");
+                var Juridica = document.getElementById("formPersonaJuridica");
+                var aportacionesfisica = document.getElementById("AportacionContenedor");
+                var aportacionesJurudicas = document.getElementById("AportacionContenedorJuridica");
+                fisico.style.display = "block";
+                Juridica.style.display = "none";
+                aportacionesfisica.style.display = "block";
+                aportacionesJurudicas.style.display = "none";
+              }
+              function myFunctionJuridica() {
+                var fisico = document.getElementById("formPersonaFisica");
+                var Juridica = document.getElementById("formPersonaJuridica");
+                var aportacionesfisica = document.getElementById("AportacionContenedor");
+                var aportacionesJurudicas = document.getElementById("AportacionContenedorJuridica");
+                fisico.style.display = "none";
+                Juridica.style.display = "block";
+                aportacionesfisica.style.display = "none";
+                aportacionesJurudicas.style.display = "block";
+               
+              }
+              </script>
+  
+
+    <!-- ################################## -->
+  
+        <form action="Asociarse" method="post" enctype="multipart/form-data" id="formPersonaFisica">
+            {% csrf_token%}
+        <h1>Persona Física</h1>
+            {% for field in formulario %}   
+              
+            <div class="mb-3">
+                {{field}}
+            </div>
+        
+            {% endfor %}
+        
+            <button type="submit" class="btn btn-success">Enviar</button>
+        </form>
+
+        <form action="AsociarseJuridica" method="post" enctype="multipart/form-data" id="formPersonaJuridica" style="display: none;">
+            {% csrf_token%}
+        <h1>Persona Jurídica</h1>
+            {% for field in formularioJuridica %}     
+            <div class="mb-3">
+                
+                {{field}}
+            </div>
+        
+            {% endfor %}
+        
+            <button type="submit" class="btn btn-success">Enviar</button>
+        </form>
+    </div>
+
+
+
+    <div class=" aportaciones">
+    <div class="AportacionContenedor" id="AportacionContenedor">
+        <h5>
+            Con tu integración construimos soluciones para transformar nuestro entorno y
+            generar prosperidad solidaria a partir del aprovechamiento de los residuos. 
+        <br>
+        <br>
+            Sólo hay que completar el formulario y le enviaremos las instrucciones por
+            correo electrónico, inscribirte con RD$ 500.00, abrir una cuenta de ahorros
+            con un mínimo de RD$ 500.00 y abrir un certificado de aportaciones de capital
+            con un mínimo de RD$1,000.00.
+ 
+            <br>
+            <br>
+            para disfrutar de los servicios de la cooperativa y
+                para formar parte de un movimiento social de transformación del modelo de manejo de residuos.
+        </h5>
+        <p>
+            <h4>VENTAJAS DE SER SOCIO: </h4>
+            <br>
+            <ul>
+                <li><span>Participar de las ganancias de la cooperativa al cabo de cada ejercicio según lo señala la ley.</span></li>
+                <li><span>Alto rendimiento para tus ahorros y depósitos a plazo fijo.</span></li>
+                <li><span>Alto rendimiento para tus ahorros y depósitos a plazo fijo.</span></li>
+            </ul>
+            
+            
+        </p>
+        <p>Aportación por inscripción por un valor de :</p><h3>DOP$ 500.00</h3>
+        <p>Aportación al capital por un valor de:</p><h3>DOP$ 1000.00</h3>
+        <p>Ahorro por un valor de :</p><h3>DOP$ 500.00 </h3><h5>valor por apertura de Cuenta de Ahorro </h5>
+
+    </div>
+
+
+<div class="AportacionContenedorJuridica" id="AportacionContenedorJuridica" style="display: none;">
+    <h5>
+        Con tu integración construimos soluciones para transformar nuestro entorno y
+        generar prosperidad solidaria a partir del aprovechamiento de los residuos. 
+        Sólo hay que completar el formulario y le enviaremos las instrucciones por
+        correo electrónico, inscribirte con RD$ 500.00, abrir una cuenta de ahorros
+        con un mínimo de RD$ 500.00 y abrir un certificado de aportaciones de capital
+        con un mínimo de RD$1,000.00. para disfrutar de los servicios de la cooperativa y
+            para formar parte de un movimiento social de transformación del modelo de manejo de residuos.
+
+    </h5>
+    <p>
+        <h4>VENTAJAS DE SER SOCIO: </h4>
+        <br>
+        <ul>
+            <li><span>Participar de las ganancias de la cooperativa al cabo de cada ejercicio según lo señala la ley.</span></li>
+            <li><span>Alto rendimiento para tus ahorros y depósitos a plazo fijo.</span></li>
+            <li><span>Alto rendimiento para tus ahorros y depósitos a plazo fijo.</span></li>
+        </ul>
+        
+        
+    </p>
+    <p>Aportación por inscripción por un valor de :</p><h3>DOP$ 2000.00</h3>
+    <p>aportación Al Capital Por Un Valor De:</p><h3>DOP$ 10,000.00</h3>
+    <p>Ahorro por un valor de :</p><h3>DOP$ 5000.00 </h3><h5>valor por apertura de Cuenta de Ahorro </h5>
+</div>
+
+
+</div>
+
+
+
+</div>
+<!-- <script>
+    document.getElementById('id_solicitud').style.display ="none";
+</script> -->
+{% endblock content%}

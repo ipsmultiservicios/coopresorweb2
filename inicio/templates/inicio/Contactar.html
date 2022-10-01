@@ -1,0 +1,26 @@
+{% extends 'main.html '%}
+{% load static %}
+
+
+{% block content%}
+<h1>Plantilla Asóciate</h1>
+
+<div class="ContenedorAsociar">
+
+    <form action="" method="post">
+        {% csrf_token%}
+        {% for field in formulario %}     
+        <div class="mb-3">
+            <label for="formFile" class="form-label">{{field.label}}</label>
+            {{field}}
+          </div>
+        
+          {% endfor %}
+      
+        <button type="submit" class="btn btn-success">Enviar</button>
+
+    </form>
+</div>
+
+<img src="{% static 'imagenes/tierra.jpg'}" alt="">
+{% endblock content%}

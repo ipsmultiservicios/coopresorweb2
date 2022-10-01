@@ -1,0 +1,74 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="servicios">
+<div class="lista1">
+
+    <h2>Productos Financieros</h2>
+    <img src="{% static 'imagenes/administracion-del-dinero_srip--flaticon.png'%}" class="img-thumbnail" id="serviciosIMG"  >
+
+<ul>
+    <li>Certificado de Aportaciones.    </li>
+    <li>Depósitos a Plazo Fijo          </li>
+    <li>Depósitos a Plazo Fijo    </li>
+    <li>Ahorro a Plazos.    </li>
+    <li>Ahorro San    </li>
+    <li>Micro Crédito en Grupo Solidario    </li>
+    <li>Préstamos Individuales a Microempresas    </li>
+    <li>Prestamos Preferenciales    </li>
+    <li>Prestamos Nominales   </li>
+    <li>Financiamiento de Equipos y Electrodomésticos    </li>
+    <li>Credi-Vivienda    </li>
+
+    <div class="d-grid gap-2">
+    <a href="Asociarse" class="btn btn-success">
+            
+        <img src="{% static 'imagenes/united.png' %}" id="iniciobtnLinks" alt="...">
+        Asóciate
+      </a>
+    </div>
+</ul>
+
+</div>
+
+<div class="lista2">
+
+    <h2>Capacitación</h2>
+    <img src="{% static 'imagenes/analysis_Freepik--Flaticon.png'%}" class="img-thumbnail" id="serviciosIMG"  >
+
+    <ul>
+        <li>Programas Basura Cero.    </li>
+        <li>Educación para toda la comunidad escolar          </li>
+        <li>Entrenamiento Corporativo    </li>
+        <li>Entrenamiento en temas de Economía Circular y Sostenibilidad        </li>
+        <li>Conferencias Corporativas        </li>
+        <li>Conferencias para ejecutivos sobre temas de Economía Circular y Sostenibilidad        </li>
+        <li>Conferencias para la Concientización        </li>
+        <li>Conferencias para cualquier interesado en temas de Economía Circular y Sostenibilidad.        </li>
+        
+    </ul>
+
+</div>
+
+
+<div class="lista3">
+    <h2>Servicios Técnicos</h2>
+    <img src="{% static 'imagenes/customer-service_srip--flaticon.png'%}" class="img-thumbnail" id="serviciosIMG"  >
+
+    
+    <ul>
+        <li><b>Puntos Limpios: </b>Estaciones de entrega y clasificación de materiales reciclables.</li>
+        <li><b>Plan de Mejora Continua: </b>Reducción de residuos en la cadena de producción, logística y marketing.</li>
+        <li><b>Central Industrial de Clasificación: </b>Gestionamos materiales reciclables de fábricas.</li>
+        <li><b>Recogida a Domicilio: </b>Recogemos materiales reciclables directamente de residencias, edificios y condominios.</li>
+        <li><b>Producción de Materia Prima Reciclada: </b>Transformación de termoplásticos en materia prima para la industria del plástico.</li>
+        </ul>
+</div>
+</div>
+
+
+
+{% endblock content %}

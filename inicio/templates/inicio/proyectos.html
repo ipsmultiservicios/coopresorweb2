@@ -1,0 +1,54 @@
+{% extends 'main.html'%}
+{% load static %}
+{% block content %}
+<div class="verproyectocontenedor">
+
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#Proyectos" type="button" role="tab" aria-controls="home" aria-selected="true">Ver Pryectos</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#Aportar" type="button" role="tab" aria-controls="contact" aria-selected="false">Aportar Idea</button>
+    </li>
+  </ul>
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="Proyectos" role="tabpanel" aria-labelledby="home-tab">
+<!-- Ver Proyectos -->  
+<div class="vistaproyectos">
+{% for item in proyectos %}
+    
+<div class="card bg-dark text-white" id="cardProyecto">
+  <a href="{% url 'Detalles' item.id  %}" >
+   <img src="{{item.Portada.url}}" class="card-img" alt="...">
+   <div class="card-img-overlay">
+     <h5 class="btn btn-info">{{item.Titulo}}</h5>
+   </div>
+  </a>
+</div>
+
+{% endfor %}
+</div>
+
+<!-- conclucion ver proyectos -->
+    </div>
+    <div class="tab-pane fade" id="Aportar" role="tabpanel" aria-labelledby="profile-tab">
+      <!-- Aportar  -->
+      <form action="" method="post" enctype="multipart/form-data" id="formPersonaFisica">
+        {% csrf_token%}
+    <h1>Idea</h1>
+        {% for field in formularioIdeas %}     
+        <div class="mb-3">
+            <label for="formFile" class="form-label">{{field.label}}</label>
+            {{field}}
+        </div>
+    
+        {% endfor %}
+    
+        <button type="submit" class="btn btn-success">Enviar</button>
+    </form>
+    <!-- conclucion Aportar -->
+  </div>
+  </div>
+</div>
+ 
+  {% endblock content %}

@@ -1,0 +1,6 @@
+python -m pip  install fpdf
+python -m pip install pillow
+python -m pip install pandas
+python -m pip install pdfkit
+python -m pip install pyodbc
+python -m pip install pypyodbc

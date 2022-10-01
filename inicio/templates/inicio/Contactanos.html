@@ -1,0 +1,45 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+<form action="" method="post" class="formCorreo">
+  {% csrf_token%}
+
+  
+<h1> Envíanos un mensajes </h1>
+Respondemos tus preguntas, te ayudamos con tus dudas, te orientamos
+<br>
+<br>
+<br>
+  {% for field in formulario %}     
+  <div class="mb-3">
+      <label for="formFile" class="form-label">{{field.label}}</label>
+      {{field}}
+    </div>
+  
+    {% endfor %}
+
+  <button type="submit" class="btn btn-success">Enviar</button>
+
+</form>
+<!-- 
+<form action="Contactanos" method="POST"enctype="application/x-www-form-urlencoded" >
+  {% csrf_token%}
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Correo Electronico</label>
+      <input type="email" class="form-control" name="correo" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text" >Estos Datos no seran Visto por nadie Ademas De Nosotros</div>
+    </div>
+    <input class="form-control" type="text" name="nombre" placeholder="Nombre Completo" aria-label="default input example">
+    <input class="form-control" type="text" name="Telefono" placeholder="Telfono O Movil" aria-label="default input example">
+    <input class="form-control" type="text" name="Asunto" placeholder="Asunto" aria-label="default input example">
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Tu Mensaje:</label>
+        <textarea class="form-control" name="mensaje" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form> -->
+
+{% endblock content %}

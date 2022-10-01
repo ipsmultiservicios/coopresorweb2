@@ -1,0 +1,112 @@
+{% extends 'main.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<div class="contenedorbusqueda">
+
+
+<div class="accordion" id="accordionPanelsStayOpenExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+          Proyectos
+        </button>
+      </h2>
+      <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+        <div class="accordion-body">
+          <!-- ###################### -->
+          <div class="vistaproyectos">
+            {% for item in proyectos %}
+                
+            <div class="card bg-dark text-white" id="cardProyecto">
+              <a href="{% url 'Detalles' item.id  %}" >
+               <img src="{{item.Portada.url}}" class="card-img" alt="...">
+               <div class="card-img-overlay">
+                 <h5 class="btn btn-info">{{item.Titulo}}</h5>
+               </div>
+              </a>
+            </div>
+            
+            {% endfor %}
+            </div>
+            
+
+          <!-- ########################## -->
+
+
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+         Nosotros
+        </button>
+      </h2>
+      <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+        <div class="accordion-body">
+          <!-- ################################################# -->
+          <div class="Equipo">
+
+
+            {% for personas in persona %}
+            <div class="persona" style="margin: 1%;">
+            <div class="card" >
+                <img src="{{personas.FotoPerfil.url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text" >
+                      <strong>{{personas.Nombre}}</strong>
+                      <br>
+                      {{personas.HistorialProfesional}}
+                  </p>
+                </div>
+              </div>
+            </div>
+        
+            {% endfor %}
+        
+        </div>
+
+          <!-- ################################################### -->
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+        Aula
+        </button>
+      </h2>
+      <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+        <div class="accordion-body">
+         <!-- #################################################### -->
+        
+    {% for categorias in categoria %}
+
+    <div class="categoria">
+        <h3> {{categorias.Categoria}}</h3>
+
+        {% for links in videos %}
+    
+            {% if links.Categoria == categorias %}
+    
+                  {% autoescape off %}{{ links.VideoURL }}{% endautoescape %}
+    
+            {% endif %}
+        {% endfor %}
+
+    </div>
+   
+{% endfor %}
+
+
+         <!-- ####################################################### -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  {% endblock content %}

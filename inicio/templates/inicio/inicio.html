@@ -1,0 +1,188 @@
+{% extends 'main.html'%}
+{% load static %}
+{% block content %}
+<div class="ContenedorInicio">  
+<!-- <img src="{% static 'imagenes/homev3-scaled.jpg'%}" alt="" id="fondo"> -->
+<div class="slideshow-container"  >
+  
+  <!-- Full-width images with number and caption text -->
+  <!-- {% for imagen in proyectos %}
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="{{imagen.Portada.url}}" style="width:100%">
+    <div class="text">Caption Text</div>
+  </div>
+  {%endfor %} -->
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://cope-cdnmed.agilecontent.com/resources/jpg/7/5/1597149701757.jpg" id="carretaimg" class="d-block w-100" alt="...">
+      </div>
+      {% for imagen in proyectos %}
+      <div class="carousel-item">
+        <img src="{{imagen.Portada.url}}"  id="carretaimg"class="d-block w-100" alt="...">
+      </div>
+      {%endfor%}
+    </div>
+
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="3000">
+        <img src="https://cope-cdnmed.agilecontent.com/resources/jpg/7/5/1597149701757.jpg" id="carretaimg" class="d-block w-100" alt="...">
+      </div>
+      {% for imagen in proyectos %}
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="{{imagen.Imagen1.url}}"  id="carretaimg"class="d-block w-100" alt="...">
+      </div>
+      {%endfor%}
+    </div>
+
+  </div>
+</div>
+
+<!--  #############################################################################  -->
+
+  <!-- Full-width images with number and caption text -->
+  <!-- {% for imagen in proyectos %}
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="{{imagen.Portada.url}}" style="width:100%">
+    <div class="text">Caption Text</div>
+  </div>
+  {%endfor %} -->
+  <div class="InicioInteraccion">
+    <div class="card mb-3"  id="Aprende">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="{% static 'imagenes/aprende.png' %}" id="imagen1" class="img-fluid rounded-start" alt="...">
+        </div>
+        
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">    
+              <a href="{% url 'Aprende' %}" class="btn btn-primary" name="btnaprendeinicio" id="iniciobtnInteraccin">Aprende</a>  
+              
+            </h5>
+            <p class="card-text"  id="iniciocardtext">Capacítate en el manejo y disposición correcta de tus residuos y sé consciente de tu impacto. </p>          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card mb-3"  id="Aplica">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="{% static 'imagenes/aplicar.png' %}" id="imagen2" class="img-fluid rounded-start" alt="...">
+        </div>
+        
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">      <a href="Proyectos" class="btn btn-primary" id="iniciobtnInteraccin">Actúa</a>
+
+            </h5>
+            <p class="card-text" id="iniciocardtext">Aplica y convierte en hábito lo aprendido.</p>         
+           </div>
+        </div>
+      </div>
+    </div>
+    <div class="card mb-3" " id="Asociate">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="{% static 'imagenes/conexsf2.png' %}" id="imagen3" class="img-fluid rounded-start" alt="...">
+          
+        </div>
+        
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">    <a href="Asociarse" name="btnasociateinicio" class="btn btn-primary" id="iniciobtnInteraccin">Asóciate</a>
+            </h5>
+            <p class="card-text"  id="iniciocardtext">Conéctate a la comunidad cooperativista e impactemos positivamente.</p>          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+<!-- ###############################################################################  -->
+
+<div class="tresRiteracion">
+  
+   <div >
+
+    <h2> Educándonos e implementado las 3 R´s : </h2>
+    <br>
+    <br>
+    <br>
+    <h4> 
+        Tenemos el poder de revertir la tendencia autodestructiva que causamos con nuestro consumo.
+    </h4>
+    <p> 
+      Así colaboramos con el aprovechamiento de los residuos de manera directa en nuestros hogares, o mejor aún a través de la asociación a nuestra Empresa Cooperativa, que pretende asociar todos los actores involucrados desde la producción, consumo y el manejo de los residuos, de manera que construyamos una economía... 			
+    </p>
+   </div>
+
+   <div class="LastresR"> 
+     <br>
+    <div>
+      <strong class="r1">R</strong><span>educir</span> 
+      <img src="{% static 'imagenes/reduce.png' %}" alt="">
+    </div>
+    <hr>
+  <div>
+    <strong class="r2">R</strong><span>eusar</span> 
+    <img src="{% static 'imagenes/reuse.png' %}" alt="">
+  </div>
+  <hr>
+  <div>
+    <strong class="r3">R</strong><span>eciclar</span>
+    <img src="{% static 'imagenes/recycle.png' %}" alt="">
+  </div>
+  <hr>
+
+  <br>
+   </div>
+
+   
+  			
+</div>  
+
+<div class="nosotros-contenedor-mision"> 
+  <div>
+      <img src="{% static 'imagenes/jodie-righos-qPHHt-JTf5s-unsplash.jpg' %}"  class="nosotros_planta" alt="">
+  </div>
+  <div class="ilustracion-mision">
+      <div>
+          <br>
+          <h2>HAZ UNA DIFERENCIA</h2>
+          <hr>
+          <span>
+            Juntos podemos aprovechar los residuos sólidos para el beneficio de todos.
+          </span>
+          <br>
+          <br>
+          <div class="d-grid gap-2 col-6 mx-auto">
+            
+           
+<a href="Proyectos" class="btn btn-success">
+            
+              <img src="{% static 'imagenes/seo.png' %}" id="iniciobtnLinks" alt="...">
+              Ver Proyectos
+            </a>
+<a href="Asociarse" class="btn btn-success">
+            
+              <img src="{% static 'imagenes/united.png' %}" id="iniciobtnLinks" alt="...">
+              Asóciate
+            </a>
+          </div>
+           
+       
+            
+         
+          
+        
+         
+      </div>
+      
+  </div>
+  
+</div>
+
+
+
+{% endblock content%}

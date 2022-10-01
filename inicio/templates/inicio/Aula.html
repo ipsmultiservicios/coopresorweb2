@@ -1,0 +1,46 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<a href="Proyectos" class="btn btn-primary" id="videoslink1"> Ver Proyectos</a>
+
+<a href="Asociarse" class="btn btn-primary" id="videoslink2"> Asóciate</a>
+   
+ 
+<div  class="Aula">
+<p>
+     En nuestra aula virtual aprenderás los fundamentos para adquirir la cultura sostenible que proponemos para aprovechar los residuos que generamos reintegrándolos a la economía, apoyados en el movimiento COOPERATIVISTA y la ECONOMIA CIRCULAR.
+</p>
+    
+<p >
+     A continuación, presentamos enlaces de las ponencias que consideramos más básicas y genéricas aplicables a nuestra realidad, adecuadas para alcanzar la sustentabilidad. Edúcate, entrénate e inspírate con los videos tutoriales a continuación:
+</p>
+<br>
+<br>
+
+    {% for categorias in categoria %}
+
+    <div class="categoria">
+        <h3> {{categorias.Categoria}}</h3>
+
+        {% for links in videos %}
+    
+            {% if links.Categoria == categorias %}
+    
+                  {% autoescape off %}{{ links.VideoURL }}{% endautoescape %}
+    
+            {% endif %}
+        {% endfor %}
+
+    </div>
+   
+{% endfor %}
+
+
+</div>
+
+
+
+{% endblock content %}
